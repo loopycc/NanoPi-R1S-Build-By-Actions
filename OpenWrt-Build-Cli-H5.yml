@@ -84,11 +84,11 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           
-      - name: Costom Configure File
+      - name: Custom Configure File
         run: |
           cd friendlywrt-h5/friendlywrt
           rm -f ./.config*
-          wget https://raw.githubusercontent.com/skytotwo/NanoPi-R1S-Build-By-Actions/master/r1s-h5-config
+          wget https://raw.githubusercontent.com/loopycc/NanoPi-R1S-Build-By-Actions/master/r1s-h5-config
           cp r1s-h5-config .config
       
       - name: Download package
